@@ -1,0 +1,24 @@
+name: py38_pt14_scn
+channels:
+  - pytorch
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - pip
+# Requirements for data preparation
+  - pandas
+# Requirements of sparse_nd_sis
+  - python=3.8
+  - numpy<1.17
+  - tqdm
+# Requirements for tensorboard
+  - tensorboard
+  - future
+# Requriements of SparseConvNet
+  - pillow
+  - cudatoolkit=10.1
+  - pytorch
+  - pip:
+  # Requirements
+    - plyfile #==0.7
