@@ -3,6 +3,9 @@
 
 3D object detection and segmentation are crucial for various domains and applications. However, transferring 2D image techniques to 3D data is still challenging because of the massive amount of data contained in 3D voxel grids. We present an architecture, which combines the principle of object detection and segmentation used by [Mask R-CNN](https://arxiv.org/abs/1703.06870)  for 2D images with the computational eﬃciency of [Sparse Submanifold Convolutions](https://arxiv.org/abs/1706.01307) on sparse 3D voxel grids. The network consists of a Region Proposal Network to predict bounding boxes and both a Class Network and a Mask Network which rely on the region proposals. We show how parts of the feature extractor, the Class Network and the Mask Network can be rendered sparse. A sparse feature extractor reduces the amount of required computation while keeping similar detection performance. A sparse Mask Network enables to process masks of diﬀerent shapes batch-wise without resizing and loosing spatial correspondence information. Furthermore, we propose a solution to ﬁnd the best density of anchors by using anchor-wise anisotropic anchor densities with respect to each anchor’s shape. Our model proves that the Mask R-CNN based 3D model can achieve both state-of-the-art object detection and instance segmentation performance.
 
+## Results
+The  method has been evaluated on the [Scannet Benchmark](http://kaldir.vc.in.tum.de/scannet_benchmark/result_details?id=369)
+
 ## Getting Started
 ### Prerequirements
 This setup is tested on Ubuntu 18.04 with CUDA 10.1. Furthermore it requires [Anaconda](https://docs.anaconda.com/anaconda/install/linux/) to be installed.
